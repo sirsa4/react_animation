@@ -16,8 +16,8 @@ const Card = ({ title, subTitle, text, button, style }: Props) => {
       </header>
       {subTitle && <h3>{subTitle}</h3>}
       <p className="text-[clamp(1.125rem,2vw,1.25rem)]">{text}</p>
-      <div className="px-2 bg-blue-600">
-        <button>{button}</button>
+      <div className="">
+        <button className="px-2 bg-blue-600 w-1/4 rounded">{button}</button>
       </div>
     </article>
   );
