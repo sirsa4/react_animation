@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "home-image": "url('/images/bg-image.jpg')",
+        "hero-image": "url('/images/hero.jpg')",
       },
       colors: {
         background: "var(--background)",
@@ -43,7 +44,7 @@ const config: Config = {
         bounce: {
           "0%, 100%": {
             transform: "translateY(0)",
-            backgroundColor: "rgba(255,0,0,0.4)",
+            backgroundColor: "rgba(0,0,0,0.4)",
           },
           "50%": {
             transform: "translateY(-20%)",
@@ -96,7 +97,7 @@ const config: Config = {
       animation: {
         slideRight: "slideRight 750ms ease-in-out",
         slideLeft: "slideLeft 750ms ease-in-out",
-        appear: "appear 1.5s ease-in-out",
+        appear: "appear 2s linear",
         bounce: "bounce 1s ease-in-out",
         scaleUp: "scaleUp 500ms ease-in-out",
         rotate: "rotate 1s linear infinite",
