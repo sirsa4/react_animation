@@ -26,3 +26,8 @@ const isInView = useInView(ref, { once: false });
   Article data here...
 </article>;
 ```
+
+## Dark mode with shadcn
+
+- [Install shadcn](https://ui.shadcn.com/docs/installation)
+- [Add dark mode](https://ui.shadcn.com/docs/dark-mode)

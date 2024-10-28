@@ -18,7 +18,7 @@ const GroupLayout = ({ children }: { children: React.ReactNode }) => {
           title="Hero title"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, corrupti sint veritatis expedita voluptatum dolorem odit quisquam distinctio nemo quo, cupiditate nobis quidem iure quis animi non est totam! Numquam?"
           button="Get in touch"
-          style="animate-slideRight text-white"
+          style="animate-slideRight bg-white/90 dark:bg-black/90 p-4 rounded"
         />
       </Header>
       <main>{children}</main>

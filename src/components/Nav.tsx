@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {
-  Home,
-  LucideIcon,
-  BookOpen,
-  Contact,
-  CircleHelp,
-  Moon,
-} from "lucide-react";
+import { Home, LucideIcon, BookOpen, Contact, CircleHelp } from "lucide-react";
 
 interface NavListInterface {
   id: number;
@@ -24,10 +17,11 @@ const navList: NavListInterface[] = [
   { id: 3, href: "/faq", text: "FAQ", Icon: CircleHelp },
 ];
 import { images } from "@/constants";
+import { ModeToggle } from "./ModeToggle";
 const Nav = () => {
   return (
     <>
-      <nav className="flex justify-between items-center text-3xl text-white font-bold bg-[rgba(0,0,0,0.2)] rounded px-2">
+      <nav className="flex justify-between items-center text-3xl font-bold dark:bg-[rgba(0,0,0,0.2)] bg-white/70  rounded px-2">
         <div>
           <Link href="/">
             <Image src={images.logo} alt="logo" width={40} />
@@ -39,7 +33,7 @@ const Nav = () => {
             return (
               <li
                 key={id}
-                className="flex justify-center items-center gap-2 group"
+                className="flex justify-center items-center gap-2 group bg-black:text-white"
               >
                 {Icon && <Icon className="group-hover:animate-bounce" />}
                 <Link href={href} className="">
@@ -49,8 +43,9 @@ const Nav = () => {
             );
           })}
         </ul>
-        <div>
-          <Moon />
+        <div className="flex justify-center items-center gap-2">
+          <span className="text-sm">Light-dark</span>
+          <ModeToggle />
         </div>
       </nav>
     </>
