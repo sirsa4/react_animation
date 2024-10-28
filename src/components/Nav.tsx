@@ -21,7 +21,7 @@ import { ModeToggle } from "./ModeToggle";
 const Nav = () => {
   return (
     <>
-      <nav className="flex justify-between items-center text-3xl font-bold dark:bg-[rgba(0,0,0,0.2)] bg-white/70  rounded px-2">
+      <nav className="sticky top-0 flex justify-between items-center text-3xl font-bold dark:bg-[rgba(0,0,0,0.2)] bg-white/70  rounded px-2">
         <div>
           <Link href="/">
             <Image src={images.logo} alt="logo" width={40} />

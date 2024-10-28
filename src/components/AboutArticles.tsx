@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Article from "./Article";
+import AnimatedText from "./AnimatedText";
 
 const AboutArticles = () => {
   return (
@@ -29,6 +30,7 @@ const AboutArticles = () => {
         style=""
         animation="animate-slideRight"
       />
+      <AnimatedText text="This is an animated text!" />
       <Article
         title="Title for first article"
         subTitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, laboriosam."
