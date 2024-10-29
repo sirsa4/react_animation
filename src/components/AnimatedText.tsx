@@ -14,7 +14,7 @@ type Props = {
 
 const defaultAnimation = {
   hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.1 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.01 } },
 };
 
 const AnimatedText = ({
