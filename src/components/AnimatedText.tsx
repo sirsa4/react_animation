@@ -13,8 +13,8 @@ type Props = {
 };
 
 const defaultAnimation = {
-  hidden: { opacity: 0, x: 10 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.1 } },
 };
 
 const AnimatedText = ({
@@ -29,7 +29,7 @@ const AnimatedText = ({
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
-  const inView = useInView(ref, { once: noRepeat });
+  const inView = useInView(ref, { once: noRepeat, amount: amountInView });
 
   useEffect(() => {
     let timeOut: NodeJS.Timeout | null = null;
@@ -61,7 +61,7 @@ const AnimatedText = ({
         variants={{
           visible: {
             transition: {
-              staggerChildren: 0.01,
+              staggerChildren: 0.11,
               amount: amountInView,
               staggerDirection: direction,
             },
@@ -77,7 +77,11 @@ const AnimatedText = ({
                   <span key={index} className="inline-block">
                     {word.split("").map((char, index) => {
                       return (
-                        <motion.span key={index} variants={defaultAnimation}>
+                        <motion.span
+                          key={index}
+                          variants={defaultAnimation}
+                          className="inline-block"
+                        >
                           {char}
                         </motion.span>
                       );
