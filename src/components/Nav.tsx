@@ -25,7 +25,7 @@ const Nav = () => {
   const handleAnimation = async () => {
     await animate(
       scope.current,
-      { y: 0, rotate: 0 },
+      { y: 0, rotate: 0, opacity: 1 },
       { duration: 5, type: "spring", bounce: 0.4 }
     );
   };
@@ -36,7 +36,7 @@ const Nav = () => {
     <>
       <motion.nav
         ref={scope}
-        initial={{ y: 800, rotate: 360 }}
+        initial={{ y: 800, rotate: 360, opacity: 0 }}
         className="sticky top-0 flex justify-between items-center text-3xl font-bold dark:bg-[rgba(0,0,0,0.2)] bg-white/70  rounded px-2"
       >
         <div>
